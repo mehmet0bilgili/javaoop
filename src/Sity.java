@@ -1,18 +1,16 @@
 public class Sity extends Car {
-    int price;
 
     public Sity() {
-        this.price = 40000;
+        this.price += 40000;
     }
 
     @Override
     public int getPrice() {
-        return price;
+        return this.price;
     }
 
     @Override
-    public void setAirbag(boolean airbag) {
-        this.airbag = airbag;
-        if (this.airbag) this.price += 3000;
+    public String toString() {
+        return "Sity " + super.toString() + "optional having a total price of " + this.price + " TL";
     }
 }

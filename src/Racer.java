@@ -1,19 +1,17 @@
 public class Racer extends Motorbike {
-    int price;
 
     public Racer() {
-        this.price = 60000;
+        this.price += 60000;
     }
 
     @Override
     public int getPrice() {
-        return price;
+        return this.price;
     }
 
     @Override
-    public void setAbs(boolean abs) {
-        this.abs = abs;
-        if (this.abs) this.price += 5000;
+    public String toString() {
+        return "Racer " + super.toString() + "optional having a total price of " + this.price + " TL.";
     }
 }
 

@@ -2,14 +2,30 @@ public class Tester {
 
     public static void main(String[] args) {
 
-        Car s1 = new Sivic();
-        System.out.println(s1.getPrice());
-        s1.setAirbag(true);
-        System.out.println(s1.getPrice());
-        Motorbike m1 = new Scooter();
-        System.out.println(m1.getPrice());
-        m1.setAbs(true);
-        System.out.println(m1.getPrice());
+        Inventory<Sonda> inventory = new Inventory<>();
+
+        Car car = new Sivic(); //50000
+        car.setAbs(true); // 5000
+        car.setMusicSystem(true); //1000
+        car.setAirbag(true); //3000
+        inventory.addItem(car);
+
+        car = new Sivic(); //50000
+        car.setAbs(true); //5000
+        car.setSunroof(true); // 2000
+        inventory.addItem(car);
+
+        car = new Sity(); // 40000
+        car.setMusicSystem(true); // 1000
+        car.setSunroof(true); // 2000
+        inventory.addItem(car);
+
+        Motorbike mBike = new Racer(); // 60000
+        mBike.setAbs(true); // 5000
+        mBike.setSeatHeating(true); // 2000
+        inventory.addItem(mBike);
+
+        System.out.println(inventory);
 
     }
 }
