@@ -6,6 +6,10 @@ public class Tester {
         System.out.println(s1.getPrice());
         s1.setAirbag(true);
         System.out.println(s1.getPrice());
+        Motorbike m1 = new Scooter();
+        System.out.println(m1.getPrice());
+        m1.setAbs(true);
+        System.out.println(m1.getPrice());
 
     }
 }

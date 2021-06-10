@@ -1,7 +1,8 @@
 public class Racer extends Motorbike {
+    int price;
 
     public Racer() {
-        super.price = 60000;
+        this.price = 60000;
     }
 
     @Override

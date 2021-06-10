@@ -1,12 +1,11 @@
-public abstract class Motorbike {
-    int price;
+public abstract class Motorbike extends Sonda {
     boolean abs;
 
     public Motorbike() {
-        this.price = 0;
         this.abs = false;
     }
 
+    @Override
     public abstract int getPrice();
 
     public abstract void setAbs(boolean abs);
