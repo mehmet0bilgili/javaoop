@@ -1,4 +1,4 @@
-public class Scooter extends Motorbike {
+public final class Scooter extends Motorbike {
 
     public Scooter() {
         this.price += 20000;
@@ -9,6 +9,6 @@ public class Scooter extends Motorbike {
 
     @Override
     public String toString() {
-        return "Scooter " + super.toString() + "optional having a total price of " + this.price + "TL.";
+        return "Scooter " + super.toString() + "optional having a total price of " + this.price + " TL.";
     }
 }

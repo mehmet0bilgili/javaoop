@@ -1,4 +1,4 @@
-public class Racer extends Motorbike {
+public final class Racer extends Motorbike {
 
     public Racer() {
         this.price += 60000;

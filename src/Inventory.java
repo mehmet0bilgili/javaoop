@@ -1,22 +1,26 @@
 import java.util.ArrayList;
 
-public class Inventory<E extends Sonda>  {
-    ArrayList<E> envanter;
+public final class Inventory<E extends Sonda>  { // tried to do generics style
+    private final ArrayList<E> envanter;
 
     public Inventory() {
         this.envanter = new ArrayList<>();
     }
 
-    public void addItem(Sonda sonda) throws NullPointerException {
+    public void addItem(Sonda sonda) {
         if (!this.envanter.contains(sonda)) {
             this.envanter.add((E) sonda);
         }
     }
 
+    public ArrayList<E> getEnvanter() {
+        return this.envanter;
+    }
+
     @Override
     public String toString() {
         StringBuilder tf = new StringBuilder();
-        int carNum = 0, sum = 0;
+        int carNum = 0, sum = 0; //sum for money
         for (Sonda s : this.envanter) {
             tf.append(s.toString()).append("\n");
             if (s instanceof Car) carNum++;

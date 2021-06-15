@@ -1,26 +1,40 @@
 public abstract class Car extends Sonda {
-    boolean airbag, musicSystem, sunroof;
+    private boolean airbag, musicSystem, sunroof;
 
     public Car() {
         this.airbag = false;
+        this.musicSystem = false;
+        this.sunroof = false;
     }
 
     @Override
     public abstract int getPrice();
 
+    public boolean isMusicSystem() {
+        return this.musicSystem;
+    }
+
+    public boolean isSunroof() {
+        return this.sunroof;
+    }
+
+    public boolean isAirbag() {
+        return this.airbag;
+    }
+
     public void setAirbag(boolean airbag) {
+        if (airbag && !this.airbag) this.price += 3000;
         this.airbag = airbag;
-        if (this.airbag) this.price += 3000;
     }
 
-    public void setMusicSystem(boolean musicSystem) {
+    public void setMusicSystem(boolean musicSystem) { // 1000
+        if (musicSystem && !this.musicSystem) this.price += 1000;
         this.musicSystem = musicSystem;
-        if (this.musicSystem) this.price += 1000;
     }
 
-    public void setSunroof(boolean sunroof) {
+    public void setSunroof(boolean sunroof) { // 2000
+        if (sunroof && !this.sunroof) this.price += 2000;
         this.sunroof = sunroof;
-        if (this.sunroof) this.price += 2000;
     }
 
     @Override

@@ -1,31 +1,38 @@
 public class Tester {
 
     public static void main(String[] args) {
+        Inventory<Sonda> envanter = new Inventory<>();
 
-        Inventory<Sonda> inventory = new Inventory<>();
+        Car car1 = new Sity(); // 40000
+        car1.setSunroof(true); // 2000
+        car1.setAbs(true); // 5000
+        envanter.addItem(car1);
 
-        Car car = new Sivic(); //50000
-        car.setAbs(true); // 5000
-        car.setMusicSystem(true); //1000
-        car.setAirbag(true); //3000
-        inventory.addItem(car);
+        car1 = new Sivic(); // 50000
+        car1.setAbs(true); // 5000
+        car1.setAirbag(true); // 3000
+        car1.setMusicSystem(true); // 1000
+        car1.setAbs(true); // nothing, car1 -sivic- already has this.
+        envanter.addItem(car1);
 
-        car = new Sivic(); //50000
-        car.setAbs(true); //5000
-        car.setSunroof(true); // 2000
-        inventory.addItem(car);
+        car1 = new Sity(); // 4000
+        car1.setAbs(true); // 5000
+        envanter.addItem(car1);
 
-        car = new Sity(); // 40000
-        car.setMusicSystem(true); // 1000
-        car.setSunroof(true); // 2000
-        inventory.addItem(car);
+        //car1 = new Scooter();
+        Motorbike mbike2 = new Scooter(); //20k
+        mbike2.setAbs(true); // 5k
+        mbike2.setSeatHeating(true); // 2k
+        envanter.addItem(mbike2);
 
-        Motorbike mBike = new Racer(); // 60000
-        mBike.setAbs(true); // 5000
-        mBike.setSeatHeating(true); // 2000
-        inventory.addItem(mBike);
+        Motorbike mbike1 = new Racer(); // 60k
+        mbike1.setAbs(true); // 5k
+        mbike1.setSeatHeating(true); // 2k
+        envanter.addItem(mbike1);
 
-        System.out.println(inventory);
+        System.out.println(envanter);
+
+        //mBike.setSunroof(true);
 
     }
 }

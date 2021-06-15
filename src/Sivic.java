@@ -1,4 +1,4 @@
-public class Sivic extends Car {
+public final class Sivic extends Car {
 
     public Sivic() {
         this.price += 50000;
@@ -11,6 +11,6 @@ public class Sivic extends Car {
 
     @Override
     public String toString() {
-        return "Sivic " + super.toString() + "optional having a total price of " + this.price + " TL.";
+        return "Sivic " + super.toString() + "having a total price of " + this.price + " TL.";
     }
 }

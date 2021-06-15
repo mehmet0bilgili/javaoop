@@ -1,5 +1,5 @@
 public abstract class Motorbike extends Sonda {
-    boolean seatHeating;
+    private boolean seatHeating;
 
     public Motorbike() {
         this.seatHeating = false;
@@ -8,9 +8,13 @@ public abstract class Motorbike extends Sonda {
     @Override
     public abstract int getPrice();
 
-    public void setSeatHeating(boolean abs) {
-        this.seatHeating = abs;
-        if (this.seatHeating) this.price += 2000;
+    public boolean isSeatHeating() {
+        return this.seatHeating;
+    }
+
+    public void setSeatHeating(boolean seatHeating) {
+        if (seatHeating && !this.seatHeating) this.price += 2000;
+        this.seatHeating = seatHeating;
     }
 
     @Override
