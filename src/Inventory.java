@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public final class Inventory<E extends Sonda>  { // tried to do generics style
-    private final ArrayList<E> envanter;
+public final class Inventory {
+    private final ArrayList<Sonda> envanter;
 
     public Inventory() {
         this.envanter = new ArrayList<>();
@@ -9,11 +9,11 @@ public final class Inventory<E extends Sonda>  { // tried to do generics style
 
     public void addItem(Sonda sonda) {
         if (!this.envanter.contains(sonda)) {
-            this.envanter.add((E) sonda);
+            this.envanter.add(sonda);
         }
     }
 
-    public ArrayList<E> getEnvanter() {
+    public ArrayList<Sonda> getEnvanter() {
         return this.envanter;
     }
 

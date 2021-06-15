@@ -1,7 +1,7 @@
 public class Tester {
 
     public static void main(String[] args) {
-        Inventory<Sonda> envanter = new Inventory<>();
+        Inventory envanter = new Inventory();
 
         Car car1 = new Sity(); // 40000
         car1.setSunroof(true); // 2000
