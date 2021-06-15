@@ -1,6 +1,6 @@
 public abstract class Sonda { // we can think the sonda as a mother of the all vehicles.
     protected int price;
-    private boolean abs; // I thought abs was universal.
+    private boolean abs; // I thought abs as an universal thing.
 
     public Sonda() {
         this.price = 0;

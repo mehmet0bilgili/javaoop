@@ -32,7 +32,5 @@ public class Tester {
 
         System.out.println(envanter);
 
-        //mBike.setSunroof(true);
-
     }
 }

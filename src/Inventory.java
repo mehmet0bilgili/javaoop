@@ -18,7 +18,7 @@ public final class Inventory<E extends Sonda>  { // tried to do generics style
     }
 
     @Override
-    public String toString() {
+    public final String toString() {
         StringBuilder tf = new StringBuilder();
         int carNum = 0, sum = 0; //sum for money
         for (Sonda s : this.envanter) {
